@@ -1,0 +1,190 @@
+html {
+  font-size: 62.5%; }
+  html body {
+    margin: 0; }
+
+.Header {
+  display: flex; }
+  .Header-toolbar {
+    position: fixed;
+    background-color: white;
+    height: 768px;
+    display: flex;
+    flex-direction: column;
+    width: 9rem;
+    align-items: center; }
+    .Header-toolbar-logo, .Header-toolbar-hamburger {
+      background-color: #434b9c;
+      width: 100%;
+      text-align: center;
+      height: 9rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .Header-toolbar-hamburger {
+      margin-top: 0.2rem; }
+      .Header-toolbar-hamburger i {
+        color: white;
+        width: 100%;
+        font-size: 3rem;
+        line-height: 3.6rem; }
+    .Header-toolbar-menu {
+      height: 100%;
+      justify-content: space-evenly;
+      color: #434b9c;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .Header-toolbar-menu i {
+        font-size: 2.5rem;
+        line-height: 3rem; }
+      .Header-toolbar-menu hr {
+        width: 2.4rem;
+        border-top: 2px solid #434b9c; }
+      .Header-toolbar-menu span {
+        font-size: 2rem;
+        line-height: 2.4rem; }
+  .Header-content {
+    margin-left: 9rem;
+    position: relative;
+    display: flex;
+    height: 768px;
+    width: 100%; }
+    .Header-content-left {
+      width: 50%;
+      background-color: #434b9c;
+      color: white; }
+      .Header-content-left-textWrapper {
+        margin-top: 18.2rem;
+        margin-left: 7.5rem;
+        position: absolute;
+        z-index: 5; }
+        .Header-content-left-textWrapper h1 {
+          font-size: 8rem;
+          line-height: 9rem;
+          text-transform: uppercase; }
+        .Header-content-left-textWrapper .btn-tag {
+          background-color: white;
+          font-size: 1.8rem;
+          line-height: 2.1rem;
+          font-style: italic;
+          padding: 0.3rem 0.8rem;
+          border-radius: 0.5rem;
+          text-decoration: none;
+          color: #434b9c; }
+        .Header-content-left-textWrapper .date {
+          font-size: 2rem;
+          line-height: 2.4rem; }
+          .Header-content-left-textWrapper .date i {
+            padding: 0.8rem;
+            background-color: #BAABEB;
+            border-radius: 50%;
+            font-size: 2.5rem;
+            margin-right: 0.5rem; }
+      .Header-content-left .shareWrapper {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        position: absolute;
+        bottom: 1.6rem;
+        margin-left: 7.5rem; }
+        .Header-content-left .shareWrapper i {
+          font-size: 3.4rem;
+          line-height: 4.1rem;
+          margin-left: 3rem; }
+        .Header-content-left .shareWrapper span {
+          margin-right: 1rem; }
+    .Header-content-right {
+      width: 50%;
+      position: relative;
+      overflow: hidden; }
+      .Header-content-right img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+
+.Content {
+  display: flex;
+  margin-left: 9rem; }
+  .Content-left {
+    color: white;
+    padding-top: 5.6rem;
+    text-align: left;
+    width: 50%;
+    background-color: #434b9c; }
+    .Content-left > * {
+      padding-left: 7.5rem;
+      padding-right: 8.5rem; }
+    .Content-left-pricing h2 {
+      margin-top: 0;
+      font-size: 4rem;
+      line-height: 4.8rem; }
+    .Content-left-pricing i {
+      font-size: 3.5rem;
+      line-height: 4.2rem;
+      margin-right: 1rem; }
+    .Content-left-pricing ul {
+      list-style-type: none; }
+      .Content-left-pricing ul li {
+        font-size: 2.5rem;
+        line-height: 3.4rem; }
+    .Content-left-pricing span {
+      color: #bcbcbc;
+      font-size: 1.6rem;
+      line-height: 1.9rem; }
+    .Content-left-pricing .simpleLink {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      border-bottom: 2px solid white;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      margin-top: 3rem;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content; }
+    .Content-left-about {
+      font-size: 2rem;
+      line-height: 3.2rem; }
+      .Content-left-about h2 {
+        font-size: 4rem;
+        line-height: 6rem; }
+      .Content-left-about strong {
+        font-weight: 900; }
+      .Content-left-about-chapo {
+        color: #BAABEB; }
+      .Content-left-about a {
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit; }
+  .Content-right {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5.6rem;
+    width: 50%;
+    align-items: center; }
+    .Content-right figure {
+      display: table;
+      margin-bottom: 10rem; }
+      .Content-right figure figcaption {
+        display: table-caption;
+        caption-side: bottom; }
+    .Content-right-firstPicture figcaption {
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+      color: #bcbcbc; }
+    .Content-right-secondPicture figcaption {
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+      color: #bcbcbc; }
+    .Content-right .link-button {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      padding: 1.8rem 2.5rem;
+      border: 2px solid #434b9c;
+      display: block;
+      color: #434b9c;
+      text-decoration: none; }
+
+/*# sourceMappingURL=print.css.map */
