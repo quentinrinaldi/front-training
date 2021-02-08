@@ -1,3 +1,51 @@
+@font-face {
+  font-family: 'Museo Sans 500';
+  src: url("../../fonts/MuseoSans-500.woff2") format("woff2"), url("../../fonts/MuseoSans-500.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo Sans 300';
+  src: url("../../fonts/MuseoSans-300.woff2") format("woff2"), url("../../fonts/MuseoSans-300.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo 300';
+  src: url("../../fonts/Museo300-Regular.woff2") format("woff2"), url("../../fonts/Museo300-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo Sans 700';
+  src: url("../fonts/MuseoSans-700.woff2") format("woff2"), url("../fonts/MuseoSans-700.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo 900';
+  src: url("../fonts/Museo900-Regular.woff2") format("woff2"), url("../fonts/Museo900-Regular.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo 500';
+  src: url("../fonts/Museo500-Regular.woff2") format("woff2"), url("../fonts/Museo500-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo 700';
+  src: url("../fonts/Museo-700.woff2") format("woff2"), url("../fonts/Museo-700.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo Sans Rounded 500';
+  src: url("../fonts/MuseoSansRounded-500.woff2") format("woff2"), url("../fonts/MuseoSansRounded-500.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   font-size: 62.5%; }
   html body {
@@ -42,6 +90,7 @@ html {
         width: 2.4rem;
         border-top: 2px solid #434b9c; }
       .Header-toolbar-menu span {
+        font-family: "Museo 900", serif;
         font-size: 2rem;
         line-height: 2.4rem; }
   .Header-content {
@@ -60,9 +109,20 @@ html {
         position: absolute;
         z-index: 5; }
         .Header-content-left-textWrapper h1 {
+          font-family: "Museo 900", serif;
           font-size: 8rem;
           line-height: 9rem;
           text-transform: uppercase; }
+        .Header-content-left-textWrapper .date {
+          font-size: 2rem;
+          line-height: 2.4rem;
+          font-family: "Museo Sans 500", serif; }
+          .Header-content-left-textWrapper .date i {
+            padding: 0.8rem;
+            background-color: #BAABEB;
+            border-radius: 50%;
+            font-size: 2.5rem;
+            margin-right: 0.5rem; }
         .Header-content-left-textWrapper .btn-tag {
           background-color: white;
           font-size: 1.8rem;
@@ -71,19 +131,12 @@ html {
           padding: 0.3rem 0.8rem;
           border-radius: 0.5rem;
           text-decoration: none;
-          color: #434b9c; }
-        .Header-content-left-textWrapper .date {
-          font-size: 2rem;
-          line-height: 2.4rem; }
-          .Header-content-left-textWrapper .date i {
-            padding: 0.8rem;
-            background-color: #BAABEB;
-            border-radius: 50%;
-            font-size: 2.5rem;
-            margin-right: 0.5rem; }
+          color: #434b9c;
+          font-family: "Museo Sans 500", serif; }
       .Header-content-left .shareWrapper {
         font-size: 2rem;
         line-height: 2.4rem;
+        font-family: "Museo 500", serif;
         position: absolute;
         bottom: 1.6rem;
         margin-left: 7.5rem; }
@@ -102,6 +155,18 @@ html {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
+      .Header-content-right .btn-plain-blue {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        padding: 1.8rem;
+        background-color: #434b9c;
+        text-decoration: none;
+        color: white;
+        position: absolute;
+        top: 2.8rem;
+        right: 6rem;
+        z-index: 10;
+        font-family: "Museo 900", serif; }
 
 .Content {
   display: flex;
@@ -118,20 +183,26 @@ html {
     .Content-left-pricing h2 {
       margin-top: 0;
       font-size: 4rem;
-      line-height: 4.8rem; }
+      line-height: 4.8rem;
+      font-family: "Museo 700", serif; }
     .Content-left-pricing i {
       font-size: 3.5rem;
       line-height: 4.2rem;
       margin-right: 1rem; }
     .Content-left-pricing ul {
-      list-style-type: none; }
+      list-style-type: none;
+      padding: 0; }
       .Content-left-pricing ul li {
+        font-family: "Museo Sans 300", serif;
         font-size: 2.5rem;
         line-height: 3.4rem; }
+        .Content-left-pricing ul li strong {
+          font-family: "Museo Sans 700", serif; }
     .Content-left-pricing span {
       color: #bcbcbc;
       font-size: 1.6rem;
-      line-height: 1.9rem; }
+      line-height: 1.9rem;
+      font-family: "Museo Sans 500", serif; }
     .Content-left-pricing .simpleLink {
       font-size: 2rem;
       line-height: 2.4rem;
@@ -142,21 +213,36 @@ html {
       margin-top: 3rem;
       width: -webkit-fit-content;
       width: -moz-fit-content;
-      width: fit-content; }
+      width: fit-content;
+      font-family: "Museo Sans 700",serif; }
     .Content-left-about {
+      font-family: "Museo Sans 300", serif;
       font-size: 2rem;
       line-height: 3.2rem; }
       .Content-left-about h2 {
         font-size: 4rem;
-        line-height: 6rem; }
+        line-height: 6rem;
+        font-family: "Museo 900", serif; }
       .Content-left-about strong {
         font-weight: 900; }
       .Content-left-about-chapo {
-        color: #BAABEB; }
+        color: #BAABEB;
+        font-family: "Museo Sans 700", serif; }
       .Content-left-about a {
         font-weight: 700;
         text-decoration: none;
-        color: inherit; }
+        color: inherit;
+        font-family: "Museo Sans 700", serif;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        margin-bottom: 11.5rem; }
+        .Content-left-about a:after {
+          content: '\f107';
+          margin-left: 1rem;
+          font-family: "Font Awesome 5 Pro";
+          font-size: 1.5rem;
+          line-height: 1.8rem;
+          vertical-align: middle; }
   .Content-right {
     background-color: white;
     display: flex;
@@ -169,7 +255,8 @@ html {
       margin-bottom: 10rem; }
       .Content-right figure figcaption {
         display: table-caption;
-        caption-side: bottom; }
+        caption-side: bottom;
+        font-family: "Museo Sans 500", serif; }
     .Content-right-firstPicture figcaption {
       font-size: 1.3rem;
       line-height: 1.5rem;
@@ -185,6 +272,7 @@ html {
       border: 2px solid #434b9c;
       display: block;
       color: #434b9c;
-      text-decoration: none; }
+      text-decoration: none;
+      font-family: "Museo Sans 500", serif; }
 
 /*# sourceMappingURL=print.css.map */

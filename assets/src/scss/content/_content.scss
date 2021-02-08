@@ -1,11 +1,10 @@
 .Content {
   display:flex;
   margin-left: 9rem;
-  &-left {
 
+  &-left {
     color: white;
     padding-top:5.6rem;
-
     text-align: left;
     width: 50%;
     background-color: $color-primary;
@@ -14,12 +13,13 @@
       padding-left:7.5rem;
       padding-right: 8.5rem;
     }
-    &-pricing {
 
+    &-pricing {
       h2 {
         margin-top:0;
         font-size: 4rem;
         line-height: 4.8rem;
+        font-family: "Museo 700", serif;
       }
       i {
         font-size:3.5rem;
@@ -28,15 +28,21 @@
       }
       ul {
         list-style-type: none;
+        padding: 0;
         li {
+          font-family: "Museo Sans 300", serif;
           font-size: 2.5rem;
           line-height: 3.4rem;
+          strong {
+            font-family: "Museo Sans 700", serif;
+          }
         }
       }
       span {
         color:$color-gray;
         font-size: 1.6rem;
         line-height: 1.9rem;
+        font-family: "Museo Sans 500", serif;
       }
       .simpleLink {
         font-size: 2rem;
@@ -47,26 +53,39 @@
         color:inherit;
         margin-top: 3rem;
         width: fit-content;
+        font-family: "Museo Sans 700",serif;
       }
     }
     &-about {
       h2 {
         font-size:4rem;
         line-height: 6rem;
+        font-family: "Museo 900", serif;
       }
+      font-family:"Museo Sans 300", serif ;
       font-size:2rem;
       line-height: 3.2rem;
       strong {
         font-weight: 900;
       }
       &-chapo {
-        color:$color-dark-gray;
+        color:$color-light-purple;
+        font-family: "Museo Sans 700", serif;
       }
       a {
         font-weight: 700;
         text-decoration: none;
         color: inherit;
+        font-family: "Museo Sans 700", serif;
+        font-size: 2rem;
+        line-height: 2.4rem;
         &:after {
+          content:'\f107';
+          margin-left: 1rem;
+          font-family: "Font Awesome 5 Pro";
+          font-size: 1.5rem;
+          line-height: 1.8rem;
+          vertical-align: middle;
         }
       }
     }
@@ -78,12 +97,14 @@
     padding-top:5.6rem;
     width: 50%;
     align-items: center;
+    padding-bottom: 11.5rem;
     figure {
       display:table;
       margin-bottom: 10rem;
       figcaption {
         display: table-caption;
         caption-side: bottom;
+        font-family: "Museo Sans 500", serif;
       }
     }
     &-firstPicture {
@@ -108,6 +129,7 @@
       display:block;
       color: $color-primary;
       text-decoration: none;
+      font-family: "Museo Sans 500", serif;
     }
   }
 }

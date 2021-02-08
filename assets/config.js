@@ -23,9 +23,9 @@ module.exports = {
       dest: './build/svg'
     },
     fonts: {
-      src: "./src/fonts",
+      src: "./src/fonts/*",
       glob: "./src/fonts/**/*",
-      dest: './build'
+      dest: './build/fonts'
     },
     twigs: {
       glob: '../templates/**/*.html.twig'
