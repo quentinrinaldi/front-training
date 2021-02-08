@@ -234,8 +234,7 @@ html {
         color: inherit;
         font-family: "Museo Sans 700", serif;
         font-size: 2rem;
-        line-height: 2.4rem;
-        margin-bottom: 11.5rem; }
+        line-height: 2.4rem; }
         .Content-left-about a:after {
           content: '\f107';
           margin-left: 1rem;
@@ -249,7 +248,8 @@ html {
     flex-direction: column;
     padding-top: 5.6rem;
     width: 50%;
-    align-items: center; }
+    align-items: center;
+    padding-bottom: 11.5rem; }
     .Content-right figure {
       display: table;
       margin-bottom: 10rem; }
@@ -274,5 +274,12 @@ html {
       color: #434b9c;
       text-decoration: none;
       font-family: "Museo Sans 500", serif; }
+
+.Media {
+  padding-top: 10rem;
+  margin-left: 9rem; }
+  .Media-wrapper img {
+    margin-left: 8.1rem;
+    margin-right: 7.6rem; }
 
 /*# sourceMappingURL=print.css.map */
