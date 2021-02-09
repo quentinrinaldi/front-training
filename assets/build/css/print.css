@@ -47,7 +47,8 @@
   font-style: normal; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  width: 100%; }
   html body {
     margin: 0; }
 
@@ -278,8 +279,11 @@ html {
 .Media {
   padding-top: 10rem;
   margin-left: 9rem; }
-  .Media-wrapper img {
-    margin-left: 8.1rem;
-    margin-right: 7.6rem; }
+  .Media-wrapper {
+    padding-left: 8rem;
+    padding-right: 8rem; }
+    .Media-wrapper img {
+      width: 100%;
+      max-width: 120rem; }
 
 /*# sourceMappingURL=print.css.map */
