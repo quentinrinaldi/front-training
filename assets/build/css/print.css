@@ -60,7 +60,7 @@ html {
     height: 768px;
     display: flex;
     flex-direction: column;
-    width: 9rem;
+    width: 8.9rem;
     align-items: center; }
     .Header-toolbar-logo, .Header-toolbar-hamburger {
       background-color: #434b9c;
@@ -133,7 +133,20 @@ html {
           border-radius: 0.5rem;
           text-decoration: none;
           color: #434b9c;
-          font-family: "Museo Sans 500", serif; }
+          font-family: "Museo Sans Rounded 500", serif; }
+        .Header-content-left-textWrapper .btn-buy {
+          text-decoration: none;
+          color: inherit;
+          border: 1px solid white;
+          padding: 1.95rem 3.2rem 1.65rem 2.8rem;
+          font-family: "Museo Sans 500";
+          font-size: 2rem;
+          line-height: 2.4rem;
+          display: block;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content;
+          margin-top: 3.7rem; }
       .Header-content-left .shareWrapper {
         font-size: 2rem;
         line-height: 2.4rem;
@@ -278,12 +291,27 @@ html {
 
 .Media {
   padding-top: 10rem;
-  margin-left: 9rem; }
+  margin-left: 9rem;
+  position: relative; }
   .Media-wrapper {
-    padding-left: 8rem;
-    padding-right: 8rem; }
-    .Media-wrapper img {
-      width: 100%;
-      max-width: 120rem; }
+    width: 87.8%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 112rem;
+    padding-bottom: 10.298rem; }
+    .Media-wrapper-image {
+      position: relative;
+      overflow: hidden;
+      height: 63rem; }
+      .Media-wrapper-image img {
+        position: absolute;
+        width: 100%;
+        z-index: 2; }
+    .Media-wrapper h2 {
+      position: absolute; }
+  .Media-background {
+    position: absolute;
+    bottom: 0;
+    z-index: 1; }
 
 /*# sourceMappingURL=print.css.map */

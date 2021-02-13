@@ -6,7 +6,7 @@
     height: 768px;
     display: flex;
     flex-direction: column;
-    width: 9rem;
+    width: 8.9rem;
     align-items: center;
     &-logo, &-hamburger{
       background-color: $color-primary;
@@ -93,7 +93,19 @@
           border-radius: 0.5rem;
           text-decoration: none;
           color: $color-primary;
-          font-family: "Museo Sans 500", serif;
+          font-family: "Museo Sans Rounded 500", serif;
+        }
+        .btn-buy {
+          text-decoration: none;
+          color: inherit;
+          border: 1px solid white;
+          padding: 1.95rem 3.2rem 1.65rem 2.8rem;
+          font-family: "Museo Sans 500";
+          font-size: 2rem;
+          line-height: 2.4rem;
+          display: block;
+          width: fit-content;
+          margin-top: 3.7rem;
         }
       }
       .shareWrapper {

@@ -1,12 +1,34 @@
 .Media {
   padding-top: 10rem;
   margin-left: 9rem;
+  position: relative;
+
   &-wrapper {
-    padding-left: 8rem;
-    padding-right: 8rem;
-    img {
-      width: 100%;
-      max-width:120rem;
+    width: 87.8%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 112rem;
+    padding-bottom: 10.298rem;
+
+    &-image {
+      position: relative;
+      overflow: hidden;
+      height: 63rem;
+
+      img {
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+      }
     }
+    h2{
+      position: absolute;
+    }
+  }
+
+  &-background {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
   }
 }
