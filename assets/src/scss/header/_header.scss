@@ -92,13 +92,19 @@
     width: 100%;
     @include tablet {
       margin: 8.9rem 0 0 0;
+      @include mobile {
+        flex-direction: column;
+        margin: 0;
+        overflow: hidden;
+      }
     }
-
     &-left {
       width: 50%;
       background-color: $color-primary;
       color: white;
-
+      @include mobile {
+        width: 100%;
+      }
       &-textWrapper {
         margin-top: 18.2rem;
         margin-left: 7.5rem;
@@ -106,6 +112,11 @@
         z-index: 5;
         @include tablet {
           margin-left: 4rem;
+          @include mobile {
+            position: relative;
+            padding-bottom: 5rem;
+            padding-top: 3rem;
+          }
         }
 
         .btn-tag {
@@ -128,6 +139,10 @@
           @include tablet {
             font-size: 6rem;
             line-height: 7rem;
+            @include mobile {
+              font-size: 4rem;
+              line-height: 5rem;
+            }
           }
         }
 
@@ -176,6 +191,7 @@
         position: absolute;
         bottom: 1.6rem;
         margin-left: 7.5rem;
+
         span {
           margin-right: 1rem;
         }
@@ -192,23 +208,37 @@
           span {
             margin-right: 0;
           }
+          @include mobile {
+            width: 100%;
+            z-index: 2;
+            background-color: white;
+            color:$color-primary;
+            bottom: 0;
+            padding: 1rem;
+            margin:0;
+          }
         }
-
-
       }
-
     }
 
     &-right {
       width: 50%;
       position: relative;
       overflow: hidden;
-
+      @include mobile {
+        width: 100%;
+        position: unset;
+        overflow: unset;
+      }
       img {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include tablet {
+          transform: translateX(-15%);
+        }
+
+        @include mobile {
+          top: 8.9rem;
+        }
       }
 
       .btn-plain-blue {
@@ -223,7 +253,12 @@
         right: 6rem;
         z-index: 10;
         font-family: "Museo 900", serif;
-
+        @include mobile {
+          top: 12rem;
+          right: 2rem;
+          font-size: 1.8rem;
+          padding: 1.4rem;
+        }
       }
     }
   }

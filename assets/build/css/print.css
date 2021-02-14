@@ -51,6 +51,9 @@ html {
   width: 100%; }
   html body {
     margin: 0; }
+  html .page-wrapper {
+    width: 100%;
+    overflow-x: hidden; }
 
 .Header {
   display: flex; }
@@ -129,10 +132,18 @@ html {
     @media (max-width: 1179px) {
       .Header-content {
         margin: 8.9rem 0 0 0; } }
+  @media (max-width: 1179px) and (max-width: 719px) {
+    .Header-content {
+      flex-direction: column;
+      margin: 0;
+      overflow: hidden; } }
     .Header-content-left {
       width: 50%;
       background-color: #434b9c;
       color: white; }
+      @media (max-width: 719px) {
+        .Header-content-left {
+          width: 100%; } }
       .Header-content-left-textWrapper {
         margin-top: 18.2rem;
         margin-left: 7.5rem;
@@ -141,6 +152,11 @@ html {
         @media (max-width: 1179px) {
           .Header-content-left-textWrapper {
             margin-left: 4rem; } }
+  @media (max-width: 1179px) and (max-width: 719px) {
+    .Header-content-left-textWrapper {
+      position: relative;
+      padding-bottom: 5rem;
+      padding-top: 3rem; } }
         .Header-content-left-textWrapper .btn-tag {
           background-color: white;
           font-size: 1.8rem;
@@ -160,6 +176,10 @@ html {
             .Header-content-left-textWrapper h1 {
               font-size: 6rem;
               line-height: 7rem; } }
+  @media (max-width: 1179px) and (max-width: 719px) {
+    .Header-content-left-textWrapper h1 {
+      font-size: 4rem;
+      line-height: 5rem; } }
         .Header-content-left-textWrapper .date {
           font-size: 2rem;
           line-height: 2.4rem;
@@ -210,15 +230,32 @@ html {
               margin-left: 0; }
             .Header-content-left .shareWrapper span {
               margin-right: 0; } }
+  @media (max-width: 1179px) and (max-width: 719px) {
+    .Header-content-left .shareWrapper {
+      width: 100%;
+      z-index: 2;
+      background-color: white;
+      color: #434b9c;
+      bottom: 0;
+      padding: 1rem;
+      margin: 0; } }
     .Header-content-right {
       width: 50%;
       position: relative;
       overflow: hidden; }
+      @media (max-width: 719px) {
+        .Header-content-right {
+          width: 100%;
+          position: unset;
+          overflow: unset; } }
       .Header-content-right img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); }
+        position: absolute; }
+        @media (max-width: 1179px) {
+          .Header-content-right img {
+            transform: translateX(-15%); } }
+        @media (max-width: 719px) {
+          .Header-content-right img {
+            top: 8.9rem; } }
       .Header-content-right .btn-plain-blue {
         font-size: 2rem;
         line-height: 2.4rem;
@@ -231,6 +268,12 @@ html {
         right: 6rem;
         z-index: 10;
         font-family: "Museo 900", serif; }
+        @media (max-width: 719px) {
+          .Header-content-right .btn-plain-blue {
+            top: 12rem;
+            right: 2rem;
+            font-size: 1.8rem;
+            padding: 1.4rem; } }
 
 .Content {
   display: flex;
@@ -238,12 +281,19 @@ html {
   @media (max-width: 1179px) {
     .Content {
       margin-left: 0; } }
+  @media (max-width: 1179px) and (max-width: 719px) {
+    .Content {
+      flex-direction: column; } }
   .Content-left {
     color: white;
     padding-top: 5.6rem;
     text-align: left;
     width: 50%;
     background-color: #434b9c; }
+    @media (max-width: 719px) {
+      .Content-left {
+        width: 100%;
+        padding-top: 4rem; } }
     .Content-left > * {
       padding-left: 7.5rem;
       padding-right: 8.5rem; }
@@ -256,9 +306,13 @@ html {
       font-size: 4rem;
       line-height: 4.8rem;
       font-family: "Museo 700", serif; }
+      @media (max-width: 719px) {
+        .Content-left-pricing h2 {
+          font-size: 3rem;
+          line-height: 3.8rem; } }
     .Content-left-pricing i {
-      font-size: 3.5rem;
-      line-height: 4.2rem;
+      font-size: 2.5rem;
+      line-height: 3.2rem;
       margin-right: 1rem; }
     .Content-left-pricing ul {
       list-style-type: none;
@@ -267,6 +321,10 @@ html {
         font-family: "Museo Sans 300", serif;
         font-size: 2.5rem;
         line-height: 3.4rem; }
+        @media (max-width: 719px) {
+          .Content-left-pricing ul li {
+            font-size: 2rem;
+            line-height: 2.9rem; } }
         .Content-left-pricing ul li strong {
           font-family: "Museo Sans 700", serif; }
     .Content-left-pricing span {
@@ -274,6 +332,10 @@ html {
       font-size: 1.6rem;
       line-height: 1.9rem;
       font-family: "Museo Sans 500", serif; }
+      @media (max-width: 719px) {
+        .Content-left-pricing span {
+          font-size: 1.4rem;
+          line-height: 1.5rem; } }
     .Content-left-pricing .simpleLink {
       font-size: 2rem;
       line-height: 2.4rem;
@@ -289,6 +351,9 @@ html {
       @media (max-width: 1179px) {
         .Content-left-pricing .simpleLink {
           font-size: 1.9rem; } }
+      @media (max-width: 719px) {
+        .Content-left-pricing .simpleLink {
+          font-size: 1.5rem; } }
     .Content-left-about {
       font-family: "Museo Sans 300", serif;
       font-size: 2rem;
@@ -298,6 +363,22 @@ html {
         font-size: 4rem;
         line-height: 6rem;
         font-family: "Museo 900", serif; }
+        @media (max-width: 1179px) {
+          .Content-left-about h2 {
+            font-size: 3rem;
+            line-height: 4rem; } }
+        @media (max-width: 719px) {
+          .Content-left-about h2 {
+            font-size: 2.7rem;
+            line-height: 3.7rem; } }
+      @media (max-width: 1179px) {
+        .Content-left-about {
+          font-size: 1.8rem;
+          line-height: 3rem; } }
+      @media (max-width: 719px) {
+        .Content-left-about {
+          font-size: 1.5rem;
+          line-height: 2.7rem; } }
       .Content-left-about strong {
         font-weight: 900; }
       .Content-left-about-chapo {
@@ -310,6 +391,10 @@ html {
         font-family: "Museo Sans 700", serif;
         font-size: 2rem;
         line-height: 2.4rem; }
+        @media (max-width: 719px) {
+          .Content-left-about .seeMore {
+            font-size: 1.5rem;
+            line-height: 1.9rem; } }
         .Content-left-about .seeMore:after {
           content: '\f107';
           margin-left: 1rem;
@@ -328,9 +413,16 @@ html {
     width: 50%;
     align-items: center;
     padding-bottom: 11.5rem; }
+    @media (max-width: 719px) {
+      .Content-right {
+        width: 100%;
+        padding-bottom: 5rem; } }
     .Content-right figure {
       display: table;
       margin-bottom: 10rem; }
+      @media (max-width: 719px) {
+        .Content-right figure {
+          margin-bottom: 5rem; } }
       .Content-right figure figcaption {
         display: table-caption;
         caption-side: bottom;
@@ -367,6 +459,9 @@ html {
     .Media {
       margin-left: 0;
       padding-top: 7rem; } }
+  @media (max-width: 1179px) and (max-width: 719px) {
+    .Media {
+      padding-top: 0rem; } }
   .Media-wrapper {
     width: 87.8%;
     margin-left: auto;
@@ -400,6 +495,10 @@ html {
           .Media-wrapper-image h2 {
             font-size: 4rem;
             line-height: 5rem; } }
+        @media (max-width: 719px) {
+          .Media-wrapper-image h2 {
+            font-size: 2rem;
+            line-height: 2.5rem; } }
       .Media-wrapper-image-iconPlayerWrapper {
         z-index: 3;
         position: absolute;
@@ -410,6 +509,9 @@ html {
         width: 8.712vw;
         height: 8.712vw;
         border-radius: 50%; }
+        @media (max-width: 1179px) {
+          .Media-wrapper-image-iconPlayerWrapper {
+            border-width: 1.5px; } }
         .Media-wrapper-image-iconPlayerWrapper i {
           color: white;
           position: absolute;
@@ -417,6 +519,9 @@ html {
           left: 50%;
           transform: translate(-50%, -50%);
           font-size: 2.3rem; }
+          @media (max-width: 719px) {
+            .Media-wrapper-image-iconPlayerWrapper i {
+              font-size: 1rem; } }
   .Media-background {
     position: absolute;
     bottom: 0;

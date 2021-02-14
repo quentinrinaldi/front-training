@@ -4,6 +4,9 @@
 
   @include tablet {
     margin-left: 0;
+    @include mobile {
+      flex-direction: column;
+    }
   }
   &-left {
     color: white;
@@ -11,7 +14,10 @@
     text-align: left;
     width: 50%;
     background-color: $color-primary;
-
+    @include mobile {
+      width: 100%;
+      padding-top: 4rem;
+    }
     & > * {
       padding-left:7.5rem;
       padding-right: 8.5rem;
@@ -27,10 +33,14 @@
         font-size: 4rem;
         line-height: 4.8rem;
         font-family: "Museo 700", serif;
+        @include mobile {
+          font-size: 3rem;
+          line-height: 3.8rem;
+        }
       }
       i {
-        font-size:3.5rem;
-        line-height:4.2rem ;
+        font-size:2.5rem;
+        line-height:3.2rem ;
         margin-right:1rem;
       }
       ul {
@@ -40,6 +50,10 @@
           font-family: "Museo Sans 300", serif;
           font-size: 2.5rem;
           line-height: 3.4rem;
+          @include mobile {
+            font-size: 2rem;
+            line-height: 2.9rem;
+          }
           strong {
             font-family: "Museo Sans 700", serif;
           }
@@ -50,6 +64,10 @@
         font-size: 1.6rem;
         line-height: 1.9rem;
         font-family: "Museo Sans 500", serif;
+        @include mobile {
+          font-size: 1.4rem;
+          line-height: 1.5rem;
+        }
       }
       .simpleLink {
         font-size: 2rem;
@@ -64,6 +82,9 @@
         @include tablet {
           font-size: 1.9rem;
         }
+        @include mobile {
+          font-size: 1.5rem;
+        }
       }
     }
     &-about {
@@ -71,10 +92,26 @@
         font-size:4rem;
         line-height: 6rem;
         font-family: "Museo 900", serif;
+        @include tablet {
+          font-size: 3rem;
+          line-height: 4rem;
+        }
+        @include mobile {
+          font-size: 2.7rem;
+          line-height: 3.7rem;
+        }
       }
       font-family:"Museo Sans 300", serif ;
       font-size:2rem;
       line-height: 3.2rem;
+      @include tablet {
+        font-size: 1.8rem;
+        line-height: 3rem;
+      }
+      @include mobile {
+        font-size: 1.5rem;
+        line-height: 2.7rem;
+      }
       strong {
         font-weight: 900;
       }
@@ -89,6 +126,10 @@
         font-family: "Museo Sans 700", serif;
         font-size: 2rem;
         line-height: 2.4rem;
+        @include mobile {
+          font-size: 1.5rem;
+          line-height: 1.9rem;
+        }
         &:after {
           content:'\f107';
           margin-left: 1rem;
@@ -112,9 +153,16 @@
     width: 50%;
     align-items: center;
     padding-bottom: 11.5rem;
+    @include mobile {
+      width: 100%;
+      padding-bottom: 5rem;
+    }
     figure {
       display:table;
       margin-bottom: 10rem;
+      @include mobile {
+        margin-bottom: 5rem;
+      }
       figcaption {
         display: table-caption;
         caption-side: bottom;
