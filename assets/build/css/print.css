@@ -495,16 +495,17 @@ html {
     .Media-wrapper-image {
       position: relative;
       overflow: hidden;
-      height: 47.81vw; }
+      height: 47.81vw;
+      max-height: 65.3rem; }
       .Media-wrapper-image img {
         position: absolute;
         width: 100%;
         z-index: 2; }
       .Media-wrapper-image h2 {
         text-align: left;
-        bottom: 9.65%;
+        top: 68.6%;
         left: 6.65%;
-        font-family: "Museo 900";
+        font-family: "Museo 900", serif;
         font-size: 6rem;
         line-height: 7rem;
         text-transform: uppercase;

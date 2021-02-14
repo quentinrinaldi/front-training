@@ -25,6 +25,7 @@
       position: relative;
       overflow: hidden;
       height: 47.81vw;
+      max-height: 65.3rem;
 
       img {
         position: absolute;
@@ -34,9 +35,9 @@
 
       h2 {
         text-align: left;
-        bottom: 9.65%;
+        top: 68.6%;
         left: 6.65%;
-        font-family: "Museo 900";
+        font-family: "Museo 900", serif;
         font-size: 6rem;
         line-height: 7rem;
         text-transform: uppercase;
