@@ -1,5 +1,6 @@
 .Header {
-  display:flex;
+  display: flex;
+
   &-toolbar {
     position: fixed;
     background-color: white;
@@ -8,18 +9,33 @@
     flex-direction: column;
     width: 8.9rem;
     align-items: center;
-    &-logo, &-hamburger{
+    @include tablet {
+      flex-direction: row;
+      width: 100%;
+      height: 8.9rem;
+      z-index: 100;
+    }
+
+    &-logo, &-hamburger {
       background-color: $color-primary;
       width: 100%;
       text-align: center;
-      height: 9rem;
+      height: 8.9rem;
       display: flex;
       justify-content: center;
       align-items: center;
+      @include tablet {
+        height: 100%;
+        width: 8.9rem;
+      }
     }
 
     &-hamburger {
       margin-top: 0.2rem;
+      @include tablet {
+        margin-top: 0;
+        margin-left: 0.2rem;
+      }
       i {
         color: white;
         width: 100%;
@@ -27,22 +43,39 @@
         line-height: 3.6rem;
       }
     }
+
     &-menu {
       height: 100%;
       justify-content: space-evenly;
 
       color: $color-primary;
-      display:flex;
+      display: flex;
       flex-direction: column;
       align-items: center;
+      @include tablet {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+      }
+
       i {
         font-size: 2.5rem;
         line-height: 3rem;
       }
+
       hr {
         width: 2.4rem;
         border-top: 2px solid $color-primary;
+        @include tablet {
+          border-left: 2px solid $color-primary;
+          border-top: none;
+          height: 2.4rem;
+          width: 2px;
+          margin: 0;
+
+        }
       }
+
       span {
         font-family: "Museo 900", serif;
         font-size: 2rem;
@@ -50,51 +83,68 @@
       }
     }
   }
+
   &-content {
-    margin-left: 9rem;
+    margin-left: 8.9rem;
     position: relative;
-    display:flex;
-    height:768px;
+    display: flex;
+    height: 768px;
     width: 100%;
+    @include tablet {
+      margin: 8.9rem 0 0 0;
+    }
+
     &-left {
-      width:50%;
+      width: 50%;
       background-color: $color-primary;
       color: white;
+
       &-textWrapper {
         margin-top: 18.2rem;
         margin-left: 7.5rem;
         position: absolute;
         z-index: 5;
+        @include tablet {
+          margin-left: 4rem;
+        }
+
+        .btn-tag {
+          background-color: white;
+          font-size: 1.8rem;
+          line-height: 2.1rem;
+          font-style: italic;
+          padding: 0.3rem 0.8rem;
+          border-radius: 0.5rem;
+          text-decoration: none;
+          color: $color-primary;
+          font-family: "Museo Sans Rounded 500", serif;
+        }
+
         h1 {
           font-family: "Museo 900", serif;
           font-size: 8rem;
           line-height: 9rem;
           text-transform: uppercase;
+          @include tablet {
+            font-size: 6rem;
+            line-height: 7rem;
+          }
         }
+
         .date {
           font-size: 2rem;
           line-height: 2.4rem;
           font-family: "Museo Sans 500", serif;
 
           i {
-            padding:0.8rem;
+            padding: 0.8rem;
             background-color: #BAABEB;
             border-radius: 50%;
             font-size: 2.5rem;
-            margin-right:0.5rem;
+            margin-right: 0.5rem;
           }
         }
-        .btn-tag {
-          background-color: white;
-          font-size: 1.8rem;
-          line-height:2.1rem;
-          font-style: italic;
-          padding:0.3rem 0.8rem;
-          border-radius: 0.5rem;
-          text-decoration: none;
-          color: $color-primary;
-          font-family: "Museo Sans Rounded 500", serif;
-        }
+
         .btn-buy {
           text-decoration: none;
           color: inherit;
@@ -106,36 +156,61 @@
           display: block;
           width: fit-content;
           margin-top: 3.7rem;
+          @include tablet {
+            font-size: 1.7rem;
+          }
         }
       }
+
       .shareWrapper {
         font-size: 2rem;
         line-height: 2.4rem;
         font-family: "Museo 500", serif;
+
         i {
           font-size: 3.4rem;
           line-height: 4.1rem;
-          margin-left:3rem;
+          margin-left: 3rem;
         }
+
         position: absolute;
         bottom: 1.6rem;
         margin-left: 7.5rem;
         span {
           margin-right: 1rem;
         }
+
+        @include tablet {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          width: calc(50% - 6rem);
+          margin-left: 3rem;
+          i {
+            margin-left: 0
+          }
+          span {
+            margin-right: 0;
+          }
+        }
+
+
       }
 
     }
+
     &-right {
-      width:50%;
+      width: 50%;
       position: relative;
       overflow: hidden;
+
       img {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
       }
+
       .btn-plain-blue {
         font-size: 2rem;
         line-height: 2.4rem;
@@ -144,7 +219,7 @@
         text-decoration: none;
         color: white;
         position: absolute;
-        top:2.8rem;
+        top: 2.8rem;
         right: 6rem;
         z-index: 10;
         font-family: "Museo 900", serif;

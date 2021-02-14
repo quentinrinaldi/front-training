@@ -1,7 +1,10 @@
 .Content {
   display:flex;
-  margin-left: 9rem;
+  margin-left: 8.9rem;
 
+  @include tablet {
+    margin-left: 0;
+  }
   &-left {
     color: white;
     padding-top:5.6rem;
@@ -12,6 +15,10 @@
     & > * {
       padding-left:7.5rem;
       padding-right: 8.5rem;
+      @include tablet {
+        padding-left:3rem;
+        padding-right: 3rem;
+      }
     }
 
     &-pricing {
@@ -54,6 +61,9 @@
         margin-top: 3rem;
         width: fit-content;
         font-family: "Museo Sans 700",serif;
+        @include tablet {
+          font-size: 1.9rem;
+        }
       }
     }
     &-about {
@@ -72,7 +82,7 @@
         color:$color-light-purple;
         font-family: "Museo Sans 700", serif;
       }
-      a {
+      .seeMore {
         font-weight: 700;
         text-decoration: none;
         color: inherit;
@@ -87,6 +97,10 @@
           line-height: 1.8rem;
           vertical-align: middle;
         }
+      }
+      padding-bottom: 10.6rem;
+      @include tablet {
+        padding-bottom: 7rem;
       }
     }
   }
@@ -105,6 +119,10 @@
         display: table-caption;
         caption-side: bottom;
         font-family: "Museo Sans 500", serif;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
       }
     }
     &-firstPicture {
@@ -130,6 +148,10 @@
       color: $color-primary;
       text-decoration: none;
       font-family: "Museo Sans 500", serif;
+
+      @include tablet {
+        font-size: 1.5rem;
+      }
     }
   }
 }

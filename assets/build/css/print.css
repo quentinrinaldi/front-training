@@ -62,16 +62,30 @@ html {
     flex-direction: column;
     width: 8.9rem;
     align-items: center; }
+    @media (max-width: 1179px) {
+      .Header-toolbar {
+        flex-direction: row;
+        width: 100%;
+        height: 8.9rem;
+        z-index: 100; } }
     .Header-toolbar-logo, .Header-toolbar-hamburger {
       background-color: #434b9c;
       width: 100%;
       text-align: center;
-      height: 9rem;
+      height: 8.9rem;
       display: flex;
       justify-content: center;
       align-items: center; }
+      @media (max-width: 1179px) {
+        .Header-toolbar-logo, .Header-toolbar-hamburger {
+          height: 100%;
+          width: 8.9rem; } }
     .Header-toolbar-hamburger {
       margin-top: 0.2rem; }
+      @media (max-width: 1179px) {
+        .Header-toolbar-hamburger {
+          margin-top: 0;
+          margin-left: 0.2rem; } }
       .Header-toolbar-hamburger i {
         color: white;
         width: 100%;
@@ -84,22 +98,37 @@ html {
       display: flex;
       flex-direction: column;
       align-items: center; }
+      @media (max-width: 1179px) {
+        .Header-toolbar-menu {
+          width: 100%;
+          height: 100%;
+          flex-direction: row; } }
       .Header-toolbar-menu i {
         font-size: 2.5rem;
         line-height: 3rem; }
       .Header-toolbar-menu hr {
         width: 2.4rem;
         border-top: 2px solid #434b9c; }
+        @media (max-width: 1179px) {
+          .Header-toolbar-menu hr {
+            border-left: 2px solid #434b9c;
+            border-top: none;
+            height: 2.4rem;
+            width: 2px;
+            margin: 0; } }
       .Header-toolbar-menu span {
         font-family: "Museo 900", serif;
         font-size: 2rem;
         line-height: 2.4rem; }
   .Header-content {
-    margin-left: 9rem;
+    margin-left: 8.9rem;
     position: relative;
     display: flex;
     height: 768px;
     width: 100%; }
+    @media (max-width: 1179px) {
+      .Header-content {
+        margin: 8.9rem 0 0 0; } }
     .Header-content-left {
       width: 50%;
       background-color: #434b9c;
@@ -109,21 +138,9 @@ html {
         margin-left: 7.5rem;
         position: absolute;
         z-index: 5; }
-        .Header-content-left-textWrapper h1 {
-          font-family: "Museo 900", serif;
-          font-size: 8rem;
-          line-height: 9rem;
-          text-transform: uppercase; }
-        .Header-content-left-textWrapper .date {
-          font-size: 2rem;
-          line-height: 2.4rem;
-          font-family: "Museo Sans 500", serif; }
-          .Header-content-left-textWrapper .date i {
-            padding: 0.8rem;
-            background-color: #BAABEB;
-            border-radius: 50%;
-            font-size: 2.5rem;
-            margin-right: 0.5rem; }
+        @media (max-width: 1179px) {
+          .Header-content-left-textWrapper {
+            margin-left: 4rem; } }
         .Header-content-left-textWrapper .btn-tag {
           background-color: white;
           font-size: 1.8rem;
@@ -134,6 +151,25 @@ html {
           text-decoration: none;
           color: #434b9c;
           font-family: "Museo Sans Rounded 500", serif; }
+        .Header-content-left-textWrapper h1 {
+          font-family: "Museo 900", serif;
+          font-size: 8rem;
+          line-height: 9rem;
+          text-transform: uppercase; }
+          @media (max-width: 1179px) {
+            .Header-content-left-textWrapper h1 {
+              font-size: 6rem;
+              line-height: 7rem; } }
+        .Header-content-left-textWrapper .date {
+          font-size: 2rem;
+          line-height: 2.4rem;
+          font-family: "Museo Sans 500", serif; }
+          .Header-content-left-textWrapper .date i {
+            padding: 0.8rem;
+            background-color: #BAABEB;
+            border-radius: 50%;
+            font-size: 2.5rem;
+            margin-right: 0.5rem; }
         .Header-content-left-textWrapper .btn-buy {
           text-decoration: none;
           color: inherit;
@@ -147,6 +183,9 @@ html {
           width: -moz-fit-content;
           width: fit-content;
           margin-top: 3.7rem; }
+          @media (max-width: 1179px) {
+            .Header-content-left-textWrapper .btn-buy {
+              font-size: 1.7rem; } }
       .Header-content-left .shareWrapper {
         font-size: 2rem;
         line-height: 2.4rem;
@@ -160,6 +199,17 @@ html {
           margin-left: 3rem; }
         .Header-content-left .shareWrapper span {
           margin-right: 1rem; }
+        @media (max-width: 1179px) {
+          .Header-content-left .shareWrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: calc(50% - 6rem);
+            margin-left: 3rem; }
+            .Header-content-left .shareWrapper i {
+              margin-left: 0; }
+            .Header-content-left .shareWrapper span {
+              margin-right: 0; } }
     .Header-content-right {
       width: 50%;
       position: relative;
@@ -184,7 +234,10 @@ html {
 
 .Content {
   display: flex;
-  margin-left: 9rem; }
+  margin-left: 8.9rem; }
+  @media (max-width: 1179px) {
+    .Content {
+      margin-left: 0; } }
   .Content-left {
     color: white;
     padding-top: 5.6rem;
@@ -194,6 +247,10 @@ html {
     .Content-left > * {
       padding-left: 7.5rem;
       padding-right: 8.5rem; }
+      @media (max-width: 1179px) {
+        .Content-left > * {
+          padding-left: 3rem;
+          padding-right: 3rem; } }
     .Content-left-pricing h2 {
       margin-top: 0;
       font-size: 4rem;
@@ -229,10 +286,14 @@ html {
       width: -moz-fit-content;
       width: fit-content;
       font-family: "Museo Sans 700",serif; }
+      @media (max-width: 1179px) {
+        .Content-left-pricing .simpleLink {
+          font-size: 1.9rem; } }
     .Content-left-about {
       font-family: "Museo Sans 300", serif;
       font-size: 2rem;
-      line-height: 3.2rem; }
+      line-height: 3.2rem;
+      padding-bottom: 10.6rem; }
       .Content-left-about h2 {
         font-size: 4rem;
         line-height: 6rem;
@@ -242,20 +303,23 @@ html {
       .Content-left-about-chapo {
         color: #BAABEB;
         font-family: "Museo Sans 700", serif; }
-      .Content-left-about a {
+      .Content-left-about .seeMore {
         font-weight: 700;
         text-decoration: none;
         color: inherit;
         font-family: "Museo Sans 700", serif;
         font-size: 2rem;
         line-height: 2.4rem; }
-        .Content-left-about a:after {
+        .Content-left-about .seeMore:after {
           content: '\f107';
           margin-left: 1rem;
           font-family: "Font Awesome 5 Pro";
           font-size: 1.5rem;
           line-height: 1.8rem;
           vertical-align: middle; }
+      @media (max-width: 1179px) {
+        .Content-left-about {
+          padding-bottom: 7rem; } }
   .Content-right {
     background-color: white;
     display: flex;
@@ -271,6 +335,9 @@ html {
         display: table-caption;
         caption-side: bottom;
         font-family: "Museo Sans 500", serif; }
+      .Content-right figure img {
+        max-width: 100%;
+        max-height: 100%; }
     .Content-right-firstPicture figcaption {
       font-size: 1.3rem;
       line-height: 1.5rem;
@@ -288,30 +355,73 @@ html {
       color: #434b9c;
       text-decoration: none;
       font-family: "Museo Sans 500", serif; }
+      @media (max-width: 1179px) {
+        .Content-right .link-button {
+          font-size: 1.5rem; } }
 
 .Media {
   padding-top: 10rem;
   margin-left: 9rem;
   position: relative; }
+  @media (max-width: 1179px) {
+    .Media {
+      margin-left: 0;
+      padding-top: 7rem; } }
   .Media-wrapper {
     width: 87.8%;
     margin-left: auto;
     margin-right: auto;
     max-width: 112rem;
     padding-bottom: 10.298rem; }
+    @media (max-width: 1179px) {
+      .Media-wrapper {
+        padding-bottom: 7rem; } }
     .Media-wrapper-image {
       position: relative;
       overflow: hidden;
-      height: 63rem; }
+      height: 47.81vw; }
       .Media-wrapper-image img {
         position: absolute;
         width: 100%;
         z-index: 2; }
-    .Media-wrapper h2 {
-      position: absolute; }
+      .Media-wrapper-image h2 {
+        text-align: left;
+        bottom: 9.65%;
+        left: 6.65%;
+        font-family: "Museo 900";
+        font-size: 6rem;
+        line-height: 7rem;
+        text-transform: uppercase;
+        color: white;
+        position: absolute;
+        z-index: 3;
+        margin: 0; }
+        @media (max-width: 1179px) {
+          .Media-wrapper-image h2 {
+            font-size: 4rem;
+            line-height: 5rem; } }
+      .Media-wrapper-image-iconPlayerWrapper {
+        z-index: 3;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid white;
+        width: 8.712vw;
+        height: 8.712vw;
+        border-radius: 50%; }
+        .Media-wrapper-image-iconPlayerWrapper i {
+          color: white;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 2.3rem; }
   .Media-background {
     position: absolute;
     bottom: 0;
-    z-index: 1; }
+    z-index: 1;
+    min-width: 100%;
+    height: 71.61%; }
 
 /*# sourceMappingURL=print.css.map */
