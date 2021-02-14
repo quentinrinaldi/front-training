@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Museo Sans 500';
-  src: url('../../fonts/MuseoSans-500.woff2') format('woff2'),
-  url('../../fonts/MuseoSans-500.woff') format('woff');
+  src: url('../fonts/MuseoSans-500.woff2') format('woff2'),
+  url('../fonts/MuseoSans-500.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Museo Sans 300';
-  src: url('../../fonts/MuseoSans-300.woff2') format('woff2'),
+  src: url('../fonts/MuseoSans-300.woff2') format('woff2'),
   url('../../fonts/MuseoSans-300.woff') format('woff');
   font-weight: 300;
   font-style: normal;
@@ -16,8 +16,8 @@
 
 @font-face {
   font-family: 'Museo 300';
-  src: url('../../fonts/Museo300-Regular.woff2') format('woff2'),
-  url('../../fonts/Museo300-Regular.woff') format('woff');
+  src: url('../fonts/Museo300-Regular.woff2') format('woff2'),
+  url('../fonts/Museo300-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
