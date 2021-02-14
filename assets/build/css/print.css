@@ -552,7 +552,7 @@ html {
     height: 71.61%; }
 
 .Footer {
-  background-color: #22286E;
+  background-color: #22286e;
   min-height: 8.8rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -590,5 +590,43 @@ html {
           .Footer ul li a {
             font-size: 1.3rem;
             line-height: 1.3rem; } }
+
+.Menu {
+  display: none; }
+  .Menu.is-active {
+    display: block; }
+  .Menu-navigationWrapper {
+    background-color: #333A84;
+    padding: 5.9rem 6rem 6.1rem 9rem; }
+    .Menu-navigationWrapper-navigation {
+      margin-top: 8.5rem;
+      padding-left: 1.7rem; }
+      .Menu-navigationWrapper-navigation ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none; }
+      .Menu-navigationWrapper-navigation-firstLevel {
+        display: flex;
+        justify-content: space-between; }
+    .Menu-navigationWrapper li.item-top {
+      color: #BAABEB;
+      font-family: "Museo 900", serif;
+      font-size: 2.5rem;
+      line-height: 6rem; }
+    .Menu-navigationWrapper li.item-below {
+      font-family: "Museo Sans 700", serif;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      color: white;
+      margin-top: 3rem; }
+    .Menu-navigationWrapper li a {
+      text-decoration: none;
+      color: inherit; }
+    .Menu-navigationWrapper-socials {
+      color: white;
+      font-size: 3.4rem;
+      line-height: 4.1rem; }
+      .Menu-navigationWrapper-socials i {
+        margin-right: 3.8rem; }
 
 /*# sourceMappingURL=print.css.map */
