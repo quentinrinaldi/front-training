@@ -89,18 +89,20 @@
     margin-left: 8.9rem;
     position: relative;
     display: flex;
-    height: 768px;
+    height: 100vh;
     width: 100%;
     @include tablet {
       margin: 8.9rem 0 0 0;
+      height: calc(100vh - 8.9rem);
       @include mobile {
         flex-direction: column;
-        margin: 0;
         overflow: hidden;
       }
     }
 
     &-left {
+      display: flex;
+      align-items: center;
       width: 50%;
       background-color: $color-primary;
       color: white;
@@ -109,7 +111,10 @@
       }
 
       &-textWrapper {
-        margin-top: 18.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
         margin-left: 7.5rem;
         position: absolute;
         z-index: 5;
@@ -132,6 +137,7 @@
           text-decoration: none;
           color: $color-primary;
           font-family: "Museo Sans Rounded 500", serif;
+          width: fit-content;
         }
 
         h1 {
@@ -139,6 +145,7 @@
           font-size: 8rem;
           line-height: 9rem;
           text-transform: uppercase;
+          margin: 0;
           @include tablet {
             font-size: 6rem;
             line-height: 7rem;
@@ -163,63 +170,47 @@
           }
         }
 
-        .btn-buy {
-          text-decoration: none;
-          color: inherit;
-          border: 1px solid white;
-          padding: 1.95rem 3.2rem 1.65rem 2.8rem;
-          font-family: "Museo Sans 500";
-          font-size: 2rem;
-          line-height: 2.4rem;
-          display: block;
-          width: fit-content;
-          margin-top: 3.7rem;
-          @include tablet {
-            font-size: 1.7rem;
+        &-buttonWrapper {
+          display: flex;
+          & > * {
+            width: fit-content;
+          }
+          .btn-buy {
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid white;
+            padding: 1.95rem 3.2rem 1.65rem 2.8rem;
+            font-family: "Museo Sans 500", sans-serif;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            display: block;
+            width: fit-content;
+            @include tablet {
+              font-size: 1.7rem;
+            }
+          }
+          &-museumSupportButton {
+            display: none;
+
+            @include mobile {
+              display: flex;
+              width: fit-content;
+              padding: 0 1.8rem;
+              margin-left: 1rem;
+            }
+          }
+        }
+        &-shareWrapper {
+          @include mobile {
+            display: none;
           }
         }
       }
-
-      .shareWrapper {
-        font-size: 2rem;
-        line-height: 2.4rem;
-        font-family: "Museo 500", serif;
-
-        i {
-          font-size: 3.4rem;
-          line-height: 4.1rem;
-          margin-left: 3rem;
-        }
-
-        position: absolute;
-        bottom: 1.6rem;
-        margin-left: 7.5rem;
-
-        span {
-          margin-right: 1rem;
-        }
-
-        @include tablet {
+      &-shareWrapper {
+        display:none;
+        @include mobile {
           display: flex;
-          align-items: center;
-          justify-content: space-evenly;
           width: calc(50% - 6rem);
-          margin-left: 3rem;
-          i {
-            margin-left: 0
-          }
-          span {
-            margin-right: 0;
-          }
-          @include mobile {
-            width: 100%;
-            z-index: 2;
-            background-color: white;
-            color: $color-primary;
-            bottom: 0;
-            padding: 1rem;
-            margin: 0;
-          }
         }
       }
     }
@@ -240,11 +231,15 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          @include tablet {
+          min-width: 100%;
+          min-height: 100%;
 
+          @include tablet {
+            top: calc(50% + 8.9rem);
+            left: calc(50% + 8.9rem);
           }
           @include mobile {
-            top: 8.9rem;
+            top: 0;
             left:0;
             transform: translateX(-15%);
           }
@@ -274,22 +269,12 @@
       }
 
       .btn-plain-blue {
-        font-size: 2rem;
-        line-height: 2.4rem;
-        padding: 1.8rem;
-        background-color: $color-primary;
-        text-decoration: none;
-        color: white;
         position: absolute;
         top: 2.8rem;
         right: 6rem;
         z-index: 10;
-        font-family: "Museo 900", serif;
         @include mobile {
-          top: 12rem;
-          right: 2rem;
-          font-size: 1.8rem;
-          padding: 1.4rem;
+          display: none;
         }
       }
     }

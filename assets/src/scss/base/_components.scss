@@ -1,0 +1,57 @@
+.btn-plain-blue {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 1.8rem;
+  background-color: $color-primary;
+  text-decoration: none;
+  color: white;
+  font-family: "Museo 900", serif;
+  display: flex;
+  align-items: center;
+  @include mobile {
+    top: 12rem;
+    right: 2rem;
+    font-size: 1.8rem;
+    padding: 1.4rem;
+  }
+}
+
+.shareWrapper {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-family: "Museo 500", serif;
+
+  i {
+    font-size: 3.4rem;
+    line-height: 4.1rem;
+    margin-left: 3rem;
+  }
+
+  span {
+    margin-right: 1rem;
+  }
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: calc(50% - 6rem);
+    i {
+      margin-left: 0
+    }
+    span {
+      margin-right: 0;
+    }
+    @include mobile {
+      position: absolute;
+      width: 100% !important;
+     // width: available;
+      z-index: 2;
+      background-color: white;
+      color: $color-primary;
+      bottom: 0;
+      padding: 1rem 0;
+      margin: 0;
+    }
+  }
+}

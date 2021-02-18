@@ -46,6 +46,54 @@
   font-weight: normal;
   font-style: normal; }
 
+.btn-plain-blue {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 1.8rem;
+  background-color: #434b9c;
+  text-decoration: none;
+  color: white;
+  font-family: "Museo 900", serif;
+  display: flex;
+  align-items: center; }
+  @media (max-width: 719px) {
+    .btn-plain-blue {
+      top: 12rem;
+      right: 2rem;
+      font-size: 1.8rem;
+      padding: 1.4rem; } }
+
+.shareWrapper {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-family: "Museo 500", serif; }
+  .shareWrapper i {
+    font-size: 3.4rem;
+    line-height: 4.1rem;
+    margin-left: 3rem; }
+  .shareWrapper span {
+    margin-right: 1rem; }
+  @media (max-width: 1179px) {
+    .shareWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: calc(50% - 6rem); }
+      .shareWrapper i {
+        margin-left: 0; }
+      .shareWrapper span {
+        margin-right: 0; } }
+  @media (max-width: 1179px) and (max-width: 719px) {
+    .shareWrapper {
+      position: absolute;
+      width: 100% !important;
+      z-index: 2;
+      background-color: white;
+      color: #434b9c;
+      bottom: 0;
+      padding: 1rem 0;
+      margin: 0; } }
+
 html {
   font-size: 62.5%;
   width: 100%; }
@@ -127,17 +175,19 @@ html {
     margin-left: 8.9rem;
     position: relative;
     display: flex;
-    height: 768px;
+    height: 100vh;
     width: 100%; }
     @media (max-width: 1179px) {
       .Header-content {
-        margin: 8.9rem 0 0 0; } }
+        margin: 8.9rem 0 0 0;
+        height: calc(100vh - 8.9rem); } }
   @media (max-width: 1179px) and (max-width: 719px) {
     .Header-content {
       flex-direction: column;
-      margin: 0;
       overflow: hidden; } }
     .Header-content-left {
+      display: flex;
+      align-items: center;
       width: 50%;
       background-color: #434b9c;
       color: white; }
@@ -145,7 +195,10 @@ html {
         .Header-content-left {
           width: 100%; } }
       .Header-content-left-textWrapper {
-        margin-top: 18.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
         margin-left: 7.5rem;
         position: absolute;
         z-index: 5; }
@@ -166,12 +219,16 @@ html {
           border-radius: 0.5rem;
           text-decoration: none;
           color: #434b9c;
-          font-family: "Museo Sans Rounded 500", serif; }
+          font-family: "Museo Sans Rounded 500", serif;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content; }
         .Header-content-left-textWrapper h1 {
           font-family: "Museo 900", serif;
           font-size: 8rem;
           line-height: 9rem;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          margin: 0; }
           @media (max-width: 1179px) {
             .Header-content-left-textWrapper h1 {
               font-size: 6rem;
@@ -190,55 +247,46 @@ html {
             border-radius: 50%;
             font-size: 2.5rem;
             margin-right: 0.5rem; }
-        .Header-content-left-textWrapper .btn-buy {
-          text-decoration: none;
-          color: inherit;
-          border: 1px solid white;
-          padding: 1.95rem 3.2rem 1.65rem 2.8rem;
-          font-family: "Museo Sans 500";
-          font-size: 2rem;
-          line-height: 2.4rem;
-          display: block;
-          width: -webkit-fit-content;
-          width: -moz-fit-content;
-          width: fit-content;
-          margin-top: 3.7rem; }
-          @media (max-width: 1179px) {
-            .Header-content-left-textWrapper .btn-buy {
-              font-size: 1.7rem; } }
-      .Header-content-left .shareWrapper {
-        font-size: 2rem;
-        line-height: 2.4rem;
-        font-family: "Museo 500", serif;
-        position: absolute;
-        bottom: 1.6rem;
-        margin-left: 7.5rem; }
-        .Header-content-left .shareWrapper i {
-          font-size: 3.4rem;
-          line-height: 4.1rem;
-          margin-left: 3rem; }
-        .Header-content-left .shareWrapper span {
-          margin-right: 1rem; }
-        @media (max-width: 1179px) {
-          .Header-content-left .shareWrapper {
+        .Header-content-left-textWrapper-buttonWrapper {
+          display: flex; }
+          .Header-content-left-textWrapper-buttonWrapper > * {
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content; }
+          .Header-content-left-textWrapper-buttonWrapper .btn-buy {
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid white;
+            padding: 1.95rem 3.2rem 1.65rem 2.8rem;
+            font-family: "Museo Sans 500", sans-serif;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            display: block;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content; }
+            @media (max-width: 1179px) {
+              .Header-content-left-textWrapper-buttonWrapper .btn-buy {
+                font-size: 1.7rem; } }
+          .Header-content-left-textWrapper-buttonWrapper-museumSupportButton {
+            display: none; }
+            @media (max-width: 719px) {
+              .Header-content-left-textWrapper-buttonWrapper-museumSupportButton {
+                display: flex;
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content;
+                padding: 0 1.8rem;
+                margin-left: 1rem; } }
+        @media (max-width: 719px) {
+          .Header-content-left-textWrapper-shareWrapper {
+            display: none; } }
+      .Header-content-left-shareWrapper {
+        display: none; }
+        @media (max-width: 719px) {
+          .Header-content-left-shareWrapper {
             display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            width: calc(50% - 6rem);
-            margin-left: 3rem; }
-            .Header-content-left .shareWrapper i {
-              margin-left: 0; }
-            .Header-content-left .shareWrapper span {
-              margin-right: 0; } }
-  @media (max-width: 1179px) and (max-width: 719px) {
-    .Header-content-left .shareWrapper {
-      width: 100%;
-      z-index: 2;
-      background-color: white;
-      color: #434b9c;
-      bottom: 0;
-      padding: 1rem;
-      margin: 0; } }
+            width: calc(50% - 6rem); } }
     .Header-content-right {
       width: 50%;
       position: relative;
@@ -252,10 +300,16 @@ html {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); }
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%; }
+        @media (max-width: 1179px) {
+          .Header-content-right-image > img {
+            top: calc(50% + 8.9rem);
+            left: calc(50% + 8.9rem); } }
         @media (max-width: 719px) {
           .Header-content-right-image > img {
-            top: 8.9rem;
+            top: 0;
             left: 0;
             transform: translateX(-15%); } }
       .Header-content-right figcaption {
@@ -278,23 +332,13 @@ html {
         .Header-content-right figcaption img {
           padding-right: 1.1rem; }
       .Header-content-right .btn-plain-blue {
-        font-size: 2rem;
-        line-height: 2.4rem;
-        padding: 1.8rem;
-        background-color: #434b9c;
-        text-decoration: none;
-        color: white;
         position: absolute;
         top: 2.8rem;
         right: 6rem;
-        z-index: 10;
-        font-family: "Museo 900", serif; }
+        z-index: 10; }
         @media (max-width: 719px) {
           .Header-content-right .btn-plain-blue {
-            top: 12rem;
-            right: 2rem;
-            font-size: 1.8rem;
-            padding: 1.4rem; } }
+            display: none; } }
 
 .Content {
   display: flex;
@@ -592,9 +636,13 @@ html {
             line-height: 1.3rem; } }
 
 .Menu {
-  display: none; }
+  display: none;
+  height: 76.8rem;
+  width: 100%; }
+  .Menu > * {
+    flex-grow: 1; }
   .Menu.is-active {
-    display: block; }
+    display: flex; }
   .Menu-navigationWrapper {
     background-color: #333A84;
     padding: 5.9rem 6rem 6.1rem 9rem; }
@@ -628,5 +676,40 @@ html {
       line-height: 4.1rem; }
       .Menu-navigationWrapper-socials i {
         margin-right: 3.8rem; }
+  .Menu-imagesWrapper {
+    background-color: #22286e;
+    width: 351px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    .Menu-imagesWrapper-image1, .Menu-imagesWrapper-image2 {
+      position: relative;
+      height: 27rem;
+      width: 24.2rem;
+      overflow: hidden;
+      display: flex;
+      padding: 3rem 2rem;
+      justify-content: flex-end;
+      align-items: flex-end; }
+      .Menu-imagesWrapper-image1 img, .Menu-imagesWrapper-image2 img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%; }
+      .Menu-imagesWrapper-image1-textWrapper, .Menu-imagesWrapper-image2-textWrapper {
+        z-index: 5;
+        color: white; }
+        .Menu-imagesWrapper-image1-textWrapper span, .Menu-imagesWrapper-image2-textWrapper span {
+          font-family: "Museo 500", sans-serif;
+          font-size: 1.5rem;
+          line-height: 1.8rem; }
+        .Menu-imagesWrapper-image1-textWrapper h2, .Menu-imagesWrapper-image2-textWrapper h2 {
+          font-family: "Museo 900", sans-serif;
+          font-size: 3.1rem;
+          margin: 1rem 0 0 0;
+          line-height: 3.1rem; }
 
 /*# sourceMappingURL=print.css.map */
