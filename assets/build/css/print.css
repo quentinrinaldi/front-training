@@ -148,7 +148,9 @@ html {
       color: #434b9c;
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      position: absolute;
+      top: 0; }
       @media (max-width: 1179px) {
         .Header-toolbar-menu {
           width: 100%;
@@ -201,7 +203,8 @@ html {
         height: 100%;
         margin-left: 7.5rem;
         position: absolute;
-        z-index: 5; }
+        z-index: 5;
+        max-height: 50rem; }
         @media (max-width: 1179px) {
           .Header-content-left-textWrapper {
             margin-left: 4rem; } }
@@ -209,7 +212,7 @@ html {
     .Header-content-left-textWrapper {
       position: relative;
       padding-bottom: 5rem;
-      padding-top: 3rem; } }
+      padding-top: 10rem; } }
         .Header-content-left-textWrapper .btn-tag {
           background-color: white;
           font-size: 1.8rem;
@@ -270,7 +273,7 @@ html {
                 font-size: 1.7rem; } }
           .Header-content-left-textWrapper-buttonWrapper-museumSupportButton {
             display: none; }
-            @media (max-width: 719px) {
+            @media (max-width: 1179px) {
               .Header-content-left-textWrapper-buttonWrapper-museumSupportButton {
                 display: flex;
                 width: -webkit-fit-content;
@@ -298,14 +301,14 @@ html {
           overflow: unset; } }
       .Header-content-right-image > img {
         position: absolute;
-        top: 50%;
+        top: 0;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0);
         min-width: 100%;
         min-height: 100%; }
         @media (max-width: 1179px) {
           .Header-content-right-image > img {
-            top: calc(50% + 8.9rem);
+            top: 0;
             left: calc(50% + 8.9rem); } }
         @media (max-width: 719px) {
           .Header-content-right-image > img {

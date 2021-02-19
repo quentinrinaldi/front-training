@@ -48,11 +48,12 @@
     &-menu {
       height: 100%;
       justify-content: space-evenly;
-
       color: $color-primary;
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: absolute;
+      top:0;
       @include tablet {
         width: 100%;
         height: 100%;
@@ -118,12 +119,13 @@
         margin-left: 7.5rem;
         position: absolute;
         z-index: 5;
+        max-height: 50rem;
         @include tablet {
           margin-left: 4rem;
           @include mobile {
             position: relative;
             padding-bottom: 5rem;
-            padding-top: 3rem;
+            padding-top: 10rem;
           }
         }
 
@@ -192,7 +194,7 @@
           &-museumSupportButton {
             display: none;
 
-            @include mobile {
+            @include tablet {
               display: flex;
               width: fit-content;
               padding: 0 1.8rem;
@@ -228,14 +230,14 @@
       &-image {
         & > img {
           position: absolute;
-          top: 50%;
+          top: 0;
           left: 50%;
-          transform: translate(-50%, -50%);
+          transform: translate(-50%,0);
           min-width: 100%;
           min-height: 100%;
 
           @include tablet {
-            top: calc(50% + 8.9rem);
+            top: 0;
             left: calc(50% + 8.9rem);
           }
           @include mobile {
