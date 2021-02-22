@@ -242,16 +242,35 @@ html {
     .Header-content-left-textWrapper h1 {
       font-size: 4rem;
       line-height: 5rem; } }
+  @media screen and (max-width: 1179px) and (max-width: 719px) and (max-width: 470px) {
+    .Header-content-left-textWrapper h1 {
+      font-size: 3.1rem;
+      line-height: 4.1rem; } }
+  @media screen and (max-width: 1179px) and (max-height: 470px) {
+    .Header-content-left-textWrapper h1 {
+      font-size: 3rem;
+      line-height: 4rem; } }
         .Header-content-left-textWrapper .date {
           font-size: 2rem;
           line-height: 2.4rem;
           font-family: "Museo Sans 500", serif; }
+          @media (max-width: 719px) {
+            .Header-content-left-textWrapper .date {
+              font-size: 1.8rem;
+              line-height: 2.2rem; } }
+          @media screen and (max-height: 470px) {
+            .Header-content-left-textWrapper .date {
+              font-size: 1.8rem;
+              line-height: 2.2rem; } }
           .Header-content-left-textWrapper .date i {
             padding: 0.8rem;
             background-color: #baabeb;
             border-radius: 50%;
             font-size: 2.5rem;
             margin-right: 0.5rem; }
+            @media (max-width: 719px) {
+              .Header-content-left-textWrapper .date i {
+                font-size: 2rem; } }
         .Header-content-left-textWrapper-buttonWrapper {
           display: flex; }
           .Header-content-left-textWrapper-buttonWrapper > * {
@@ -272,7 +291,13 @@ html {
             width: fit-content; }
             @media (max-width: 1179px) {
               .Header-content-left-textWrapper-buttonWrapper .btn-buy {
-                font-size: 1.7rem; } }
+                font-size: 1.7rem;
+                line-height: 2.1rem; } }
+            @media (max-width: 719px) {
+              .Header-content-left-textWrapper-buttonWrapper .btn-buy {
+                font-size: 1.5rem;
+                line-height: 1.9rem;
+                padding: 1.8rem 3rem 1.4rem 2.6rem; } }
           .Header-content-left-textWrapper-buttonWrapper-museumSupportButton {
             display: none; }
             @media (max-width: 1179px) {
@@ -286,6 +311,9 @@ html {
         @media (max-width: 719px) {
           .Header-content-left-textWrapper-shareWrapper {
             display: none; } }
+        @media screen and (max-height: 470px) {
+          .Header-content-left-textWrapper-shareWrapper {
+            width: unset; } }
       .Header-content-left-shareWrapper {
         display: none; }
         @media (max-width: 719px) {
@@ -334,6 +362,12 @@ html {
         @media (max-width: 719px) {
           .Header-content-right figcaption {
             bottom: 6.1rem; } }
+        @media screen and (max-height: 599px) {
+          .Header-content-right figcaption {
+            display: none; } }
+        @media screen and (max-width: 300px) {
+          .Header-content-right figcaption {
+            display: none; } }
         .Header-content-right figcaption img {
           padding-right: 1.1rem; }
       .Header-content-right .btn-plain-blue {
@@ -660,27 +694,39 @@ html {
     display: flex; }
   .Menu-navigationWrapper {
     background-color: #333A84;
-    padding: 5.9rem 6rem 6.1rem 9rem;
+    padding: 0 6rem 0 9rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; }
     @media (max-width: 1179px) {
       .Menu-navigationWrapper {
-        padding: 3rem; } }
+        padding: 0 3rem;
+        height: 70%; } }
+    @media (max-width: 1179px) {
+      .Menu-navigationWrapper-logo img {
+        height: 6rem; } }
+    @media (max-width: 719px) {
+      .Menu-navigationWrapper-logo {
+        display: flex;
+        justify-content: center; } }
     .Menu-navigationWrapper-navigation {
       padding-left: 1.7rem; }
       @media (max-width: 1179px) {
         .Menu-navigationWrapper-navigation {
           padding-left: 0; } }
+      @media (max-width: 719px) {
+        .Menu-navigationWrapper-navigation {
+          min-height: 50vh; } }
       .Menu-navigationWrapper-navigation ul {
         margin: 0;
         padding: 0;
         list-style-type: none; }
         @media (max-width: 719px) {
           .Menu-navigationWrapper-navigation ul.items-below {
-            display: none; }
+            display: none;
+            padding-bottom: 2rem; }
             .Menu-navigationWrapper-navigation ul.items-below.is-active {
-              display: inline; } }
+              display: block; } }
       .Menu-navigationWrapper-navigation-firstLevel {
         display: flex;
         justify-content: space-between; }
@@ -693,6 +739,10 @@ html {
         font-family: "Museo 900", serif;
         font-size: 2.5rem;
         line-height: 6rem; }
+        @media (max-width: 1179px) {
+          .Menu-navigationWrapper-navigation li.item-top {
+            font-size: 1.5rem;
+            line-height: 4rem; } }
         @media (max-width: 719px) {
           .Menu-navigationWrapper-navigation li.item-top {
             text-align: center;
@@ -703,18 +753,31 @@ html {
         line-height: 2.4rem;
         color: white;
         margin-top: 3rem; }
+        @media (max-width: 1179px) {
+          .Menu-navigationWrapper-navigation li.item-below {
+            font-size: 1.7rem;
+            line-height: 2.1rem;
+            margin-top: 1rem; } }
       .Menu-navigationWrapper-navigation li a {
         text-decoration: none;
         color: inherit; }
     .Menu-navigationWrapper-socials {
-      color: white;
-      font-size: 3.4rem;
-      line-height: 4.1rem; }
+      display: flex;
+      justify-content: flex-start; }
       @media (max-width: 719px) {
         .Menu-navigationWrapper-socials {
-          text-align: center; } }
-      .Menu-navigationWrapper-socials i {
-        margin-right: 3.8rem; }
+          justify-content: center; } }
+      .Menu-navigationWrapper-socials-socialsWrapper {
+        color: white;
+        font-size: 3.4rem;
+        line-height: 4.1rem;
+        width: 15rem;
+        display: flex;
+        justify-content: space-between; }
+        @media (max-width: 1179px) {
+          .Menu-navigationWrapper-socials-socialsWrapper {
+            font-size: 2.9rem;
+            line-height: 3.6rem; } }
   .Menu-imagesWrapper {
     background-color: #22286e;
     width: 351px;
@@ -726,7 +789,11 @@ html {
       .Menu-imagesWrapper {
         width: 100%;
         flex-direction: row;
-        padding: 5rem 0; } }
+        padding: 3rem 0;
+        height: 30%; } }
+    @media (max-width: 719px) {
+      .Menu-imagesWrapper {
+        display: none; } }
     .Menu-imagesWrapper-image1, .Menu-imagesWrapper-image2 {
       position: relative;
       height: 27rem;
@@ -736,6 +803,9 @@ html {
       padding: 3rem 2rem;
       justify-content: flex-end;
       align-items: flex-end; }
+      @media (max-width: 1179px) {
+        .Menu-imagesWrapper-image1, .Menu-imagesWrapper-image2 {
+          height: 10rem; } }
       .Menu-imagesWrapper-image1 img, .Menu-imagesWrapper-image2 img {
         position: absolute;
         top: 50%;
