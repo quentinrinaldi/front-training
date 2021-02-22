@@ -132,7 +132,9 @@ html {
           height: 100%;
           width: 8.9rem; } }
     .Header-toolbar-hamburger {
-      margin-top: 0.2rem; }
+      margin-top: 0.2rem;
+      z-index: 2;
+      cursor: pointer; }
       @media (max-width: 1179px) {
         .Header-toolbar-hamburger {
           margin-top: 0;
@@ -246,7 +248,7 @@ html {
           font-family: "Museo Sans 500", serif; }
           .Header-content-left-textWrapper .date i {
             padding: 0.8rem;
-            background-color: #BAABEB;
+            background-color: #baabeb;
             border-radius: 50%;
             font-size: 2.5rem;
             margin-right: 0.5rem; }
@@ -640,43 +642,77 @@ html {
 
 .Menu {
   display: none;
-  height: 76.8rem;
-  width: 100%; }
+  height: 100vh;
+  width: calc(100% - 8.9rem);
+  position: absolute;
+  z-index: 20;
+  margin-left: 8.9rem; }
+  @media (max-width: 1179px) {
+    .Menu {
+      margin-left: 0;
+      top: 8.9rem;
+      height: calc(100vh - 8.9rem);
+      width: 100vw;
+      flex-direction: column; } }
   .Menu > * {
     flex-grow: 1; }
   .Menu.is-active {
     display: flex; }
   .Menu-navigationWrapper {
     background-color: #333A84;
-    padding: 5.9rem 6rem 6.1rem 9rem; }
+    padding: 5.9rem 6rem 6.1rem 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    @media (max-width: 1179px) {
+      .Menu-navigationWrapper {
+        padding: 3rem; } }
     .Menu-navigationWrapper-navigation {
-      margin-top: 8.5rem;
       padding-left: 1.7rem; }
+      @media (max-width: 1179px) {
+        .Menu-navigationWrapper-navigation {
+          padding-left: 0; } }
       .Menu-navigationWrapper-navigation ul {
         margin: 0;
         padding: 0;
         list-style-type: none; }
+        @media (max-width: 719px) {
+          .Menu-navigationWrapper-navigation ul.items-below {
+            display: none; }
+            .Menu-navigationWrapper-navigation ul.items-below.is-active {
+              display: inline; } }
       .Menu-navigationWrapper-navigation-firstLevel {
         display: flex;
         justify-content: space-between; }
-    .Menu-navigationWrapper li.item-top {
-      color: #BAABEB;
-      font-family: "Museo 900", serif;
-      font-size: 2.5rem;
-      line-height: 6rem; }
-    .Menu-navigationWrapper li.item-below {
-      font-family: "Museo Sans 700", serif;
-      font-size: 2rem;
-      line-height: 2.4rem;
-      color: white;
-      margin-top: 3rem; }
-    .Menu-navigationWrapper li a {
-      text-decoration: none;
-      color: inherit; }
+        @media (max-width: 719px) {
+          .Menu-navigationWrapper-navigation-firstLevel {
+            flex-direction: column;
+            align-items: center; } }
+      .Menu-navigationWrapper-navigation li.item-top {
+        color: #BAABEB;
+        font-family: "Museo 900", serif;
+        font-size: 2.5rem;
+        line-height: 6rem; }
+        @media (max-width: 719px) {
+          .Menu-navigationWrapper-navigation li.item-top {
+            text-align: center;
+            width: 100%; } }
+      .Menu-navigationWrapper-navigation li.item-below {
+        font-family: "Museo Sans 700", serif;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        color: white;
+        margin-top: 3rem; }
+      .Menu-navigationWrapper-navigation li a {
+        text-decoration: none;
+        color: inherit; }
     .Menu-navigationWrapper-socials {
       color: white;
       font-size: 3.4rem;
       line-height: 4.1rem; }
+      @media (max-width: 719px) {
+        .Menu-navigationWrapper-socials {
+          text-align: center; } }
       .Menu-navigationWrapper-socials i {
         margin-right: 3.8rem; }
   .Menu-imagesWrapper {
@@ -686,6 +722,11 @@ html {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center; }
+    @media (max-width: 1179px) {
+      .Menu-imagesWrapper {
+        width: 100%;
+        flex-direction: row;
+        padding: 5rem 0; } }
     .Menu-imagesWrapper-image1, .Menu-imagesWrapper-image2 {
       position: relative;
       height: 27rem;

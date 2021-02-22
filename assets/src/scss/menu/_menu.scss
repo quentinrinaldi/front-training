@@ -1,105 +1,145 @@
 .Menu {
-  display: none;
-  height: 76.8rem;
-  width: 100%;
-  & > * {
-    flex-grow: 1;
-  }
-  &.is-active {
-    display: flex;
-  }
-
-  &-navigationWrapper {
-    background-color: $color-medium-blue;
-    padding: 5.9rem 6rem 6.1rem 9rem;
-
-    &-navigation {
-      margin-top: 8.5rem;
-      padding-left: 1.7rem;
-
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-      }
-
-      &-firstLevel {
+    display: none;
+    height: 100vh;
+    width: calc(100% - 8.9rem);
+    position: absolute;
+    z-index: 20;
+    margin-left: 8.9rem;
+    @include tablet {
+        margin-left: 0;
+        top: 8.9rem;
+        height: calc(100vh - 8.9rem);
+        width: 100vw;
+        flex-direction: column;
+    }
+    & > * {
+        flex-grow: 1;
+    }
+    &.is-active {
         display: flex;
-        justify-content: space-between;
-      }
     }
 
-    li {
-      &.item-top {
-        color: $color-light-purple;
-        font-family: "Museo 900", serif;
-        font-size: 2.5rem;
-        line-height: 6rem;
-      }
-
-      &.item-below {
-        font-family: "Museo Sans 700", serif;
-        font-size: 2rem;
-        line-height: 2.4rem;
-        color: white;
-        margin-top: 3rem;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-    }
-    &-socials {
-      color: white;
-      font-size: 3.4rem;
-      line-height: 4.1rem;
-      i {
-        margin-right: 3.8rem;
-      }
-    }
-  }
-  &-imagesWrapper {
-    background-color: $color-dark-blue;
-    width: 351px;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    &-image1, &-image2 {
-      position: relative;
-      height:27rem;
-      width: 24.2rem;
-      overflow: hidden;
-      display: flex;
-      padding: 3rem 2rem;
-      justify-content: flex-end;
-      align-items: flex-end;
-      img {
-        position: absolute;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        min-width: 100%;
-        min-height: 100%;
-      }
-      &-textWrapper {
-        z-index: 5;
-        color: white;
-        span {
-          font-family: "Museo 500", sans-serif ;
-          font-size: 1.5rem;
-          line-height: 1.8rem;
+    &-navigationWrapper {
+        background-color: $color-medium-blue;
+        padding: 5.9rem 6rem 6.1rem 9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        @include tablet {
+            padding: 3rem;
         }
-        h2 {
-          font-family: "Museo 900", sans-serif;
-          font-size: 3.1rem ;
-          margin:1rem 0 0 0;
-          line-height: 3.1rem;
+        &-navigation {
+            padding-left: 1.7rem;
+            @include tablet {
+                padding-left: 0;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                &.items-below {
+                    @include mobile {
+                        display: none;
+                        &.is-active {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+
+            &-firstLevel {
+                display: flex;
+                justify-content: space-between;
+                @include mobile {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            li {
+                &.item-top {
+                    color: $color-light-purple;
+                    font-family: "Museo 900", serif;
+                    font-size: 2.5rem;
+                    line-height: 6rem;
+                    @include mobile {
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+
+                &.item-below {
+                    font-family: "Museo Sans 700", serif;
+                    font-size: 2rem;
+                    line-height: 2.4rem;
+                    color: white;
+                    margin-top: 3rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
         }
-
-      }
+        &-socials {
+            color: white;
+            font-size: 3.4rem;
+            line-height: 4.1rem;
+            @include mobile {
+                text-align: center;
+            }
+            i {
+                margin-right: 3.8rem;
+            }
+        }
     }
-  }
-
+    &-imagesWrapper {
+        background-color: $color-dark-blue;
+        width: 351px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        @include tablet {
+            width: 100%;
+            flex-direction: row;
+            padding: 5rem 0;
+        }
+        &-image1,
+        &-image2 {
+            position: relative;
+            height: 27rem;
+            width: 24.2rem;
+            overflow: hidden;
+            display: flex;
+            padding: 3rem 2rem;
+            justify-content: flex-end;
+            align-items: flex-end;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                min-width: 100%;
+                min-height: 100%;
+            }
+            &-textWrapper {
+                z-index: 5;
+                color: white;
+                span {
+                    font-family: "Museo 500", sans-serif;
+                    font-size: 1.5rem;
+                    line-height: 1.8rem;
+                }
+                h2 {
+                    font-family: "Museo 900", sans-serif;
+                    font-size: 3.1rem;
+                    margin: 1rem 0 0 0;
+                    line-height: 3.1rem;
+                }
+            }
+        }
+    }
 }
